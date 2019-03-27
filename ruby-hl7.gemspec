@@ -73,13 +73,9 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rspec', '~> 2.99'
   s.add_development_dependency 'pry'
 
-    if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<rake>, [">= 10.0.3"])
-      s.add_runtime_dependency(%q<rubyforge>, [">= 2.0.0"])
-    else
-      s.add_dependency(%q<rake>, [">= 10.0.3"])
-      s.add_dependency(%q<rubyforge>, [">= 2.0.0"])
-    end
+  if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
+    s.add_runtime_dependency(%q<rake>, [">= 10.0.3"])
+    s.add_runtime_dependency(%q<rubyforge>, [">= 2.0.0"])
   else
     s.add_dependency(%q<rake>, [">= 10.0.3"])
     s.add_dependency(%q<rubyforge>, [">= 2.0.0"])
