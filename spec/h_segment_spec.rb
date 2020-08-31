@@ -9,14 +9,14 @@ describe HL7::Message::Segment::H do
 
     it "sets values correctly" do
       h = HL7::Message::Segment::H.new @base
-      expect(h.delimiters).to eq "\\^&"
+      expect(h.enc_chars).to eq "\\^&"
       expect(h.message_control_id).to eq ""
       expect(h.access_password).to eq ""
-      expect(h.sender).to eq "Phadia.Prime^1.2.0^^4.00"
-      expect(h.sender_address).to eq ""
+      expect(h.sending_app).to eq "Phadia.Prime^1.2.0^^4.00"
+      expect(h.sending_facility).to eq ""
       expect(h.reserved).to eq ""
-      expect(h.sender_telephone).to eq ""
-      expect(h.sender_characteristics).to eq ""
+      expect(h.sending_telephone).to eq ""
+      expect(h.sending_characteristics).to eq ""
       expect(h.receiver_id).to eq ""
       expect(h.comment).to eq ""
       expect(h.processing_id).to eq "P"
